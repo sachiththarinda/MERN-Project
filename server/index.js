@@ -16,7 +16,7 @@ app.use(cors());
 app.use('/posts', postRoutes)
 
 const CONNECTIO_URL = 'mongodb+srv://mernproject:mernproject@cluster0.5fcbk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
-const PORT = process.env.PORT || 7000;
+const PORT = process.env.PORT || 5000;
 
 mongoose.connect(CONNECTIO_URL, {useNewUrlParser: true, useUnifiedTopology: true})
     .then(() => app.listen(PORT, ()=> console.log('Server running on port: ${PORT}')))
